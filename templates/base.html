@@ -51,9 +51,7 @@
                 <li {% if contact_nav %}class="active" {% endif %}><a href="/contact.html">Contact</a></li>
               </ul>
               <form class="navbar-form pull-right">
-                {% if user.is_authenticated() %}
-                  <button type="submit" class="btn">Login</button>
-                {%  endif %}
+                <button type="submit" class="btn">Login</button>
               </form>
             </div><!--/.nav-collapse -->
           </div>
