@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %}Django Templates{% endblock %}
+
 {% block nav %}
   {% with home_nav=True %}
     {{ block.super }}
@@ -7,6 +9,50 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Bootstrap starter template</h1>
-  <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+<section class="jumbotron">
+	<h1>Django Themes</h1>
+	<article class="lead">A one stop fun place for developers and non-developers to shop &amp; sell Django Themes.</article>
+	<section class="row-fluid">
+		<section class="span6">
+			<!-- Carousel -->
+			<div id="myCarousel" class="carousel slide">
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="img/slide-01.jpg" alt="">
+					</div>
+					<div class="carousel-inner">
+						<img src="img/slide-02.jpg" alt="">
+					</div>
+					<div class="carousel-inner">
+						<img src="img/slide-03.jpg" alt="">
+					</div>
+				</div><!-- end of carousel-inner -->
+			</div><!-- end of carousel -->
+		</section><!-- end of span6 -->
+
+		<!-- sign up form -->
+		<section class="offset1 span5">
+			<form method="POST" action="">
+				<label>Fill in particular below to sign up</label>
+				<input class="input-xlarge2" type="text" name="username" placeholder="Pick Username...">
+				<label><input class="input-xlarge2" type="text" name="text" placeholder="Your Email..."></label>
+				<label><input class="input-xlarge2" type="password" placeholder="Enter Password..."></label>
+				<label><input class="input-xlarge2" type="password" placeholder="Retype Password..."></label>
+				<p>By clicking on "Sign up for free" below, you agree to the <a href="{{url('terms')}}">Terms of Service</a> and the <a href="{{url('privacy')}}">Privacy Policy</a>.</p>
+				<label><button type="submit" class="btn btn-success span10">Sign Up for Free</button></label>
+			</form>
+		</section><!-- end of sign up form-->
+	</section><!-- end of row-fluid -->
+</section>	
 {% endblock content %}
+
+{% block script %}
+<script>
+!function ($) {
+	$(function(){
+		//carousel demo
+		$('#myCarousel').carousel()
+	})
+}(window.jQuery)
+</script>
+{% endblock %}
