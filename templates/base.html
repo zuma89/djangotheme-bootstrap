@@ -63,7 +63,23 @@
       {% block content %}
 
       {% endblock content %}
+      
+      <hr>
 
+      <footer>
+        <ul class="pull-right" id="right">
+          {% block footer-links %}
+          <li><a href="/terms.html">Terms of Service</a></li>
+          &#149;
+          <li><a href="/privacy.html">Privacy</a></li>
+          &#149;
+          <li><a href="/documentation.html">Documentation</a></li>
+          &#149;
+          <li><a href="/contact.html">Contact Us</a></li>
+          {% endblock %}
+        </ul>
+        <p>&copy; 2013 Django Templates. All rights reserved.</p>     
+      </footer>
     </div> <!-- /container -->
 
     <!-- Lazy Loads -->
