@@ -35,7 +35,7 @@
   <body>
 
     {% block nav %}
-      <div class="navbar navbar-inverse navbar-fixed-top">
+      <header class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
           <div class="container">
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -46,7 +46,7 @@
             <a class="brand" href="/">Django Themes</a>
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li {% if home_nav %} class="active" {% endif %}><a href="/index.html">Home</a></li>
+                <li {% if home_nav %} class="active" {% endif %}><a href="/">Home</a></li>
                 <li {% if about_nav %}class="active" {% endif %}><a href="/about.html">About</a></li>
                 <li {% if contact_nav %}class="active" {% endif %}><a href="/contact.html">Contact</a></li>
               </ul>
@@ -56,10 +56,10 @@
             </div><!--/.nav-collapse -->
           </div>
         </div>
-      </div>
+      </header>
     {% endblock nav %}
 
-    <div class="container">
+    <div class="container-narrow">
       {% block content %}
 
       {% endblock content %}
