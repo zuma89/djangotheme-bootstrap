@@ -17,6 +17,7 @@ body > .navbar .brand:hover {
 .container-narrow {
   margin: 0 auto;
   max-width: 1000px;
+  margin-top: 50px;
 }
 
 .container-fluid {
