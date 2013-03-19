@@ -61,7 +61,10 @@
 
     <div class="container-narrow">
       {% block content %}
-
+        {% block sidebar %}      
+        {% endblock sidebar %}
+        {% block aboutcontent %}
+        {% endblock aboutcontent %}
       {% endblock content %}
       
       <hr>
