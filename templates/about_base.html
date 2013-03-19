@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  {% with about_nav=True %}
+    {{ block.super }}
+  {% endwith %}
+{% endblock nav%}
+
+{% block content %}
+<div class="container-narrow">
+	<div class="row-fluid">
+	{% block sidebar %}
+		<div class="span4 bs-docs-sidebar">
+			<ul class="nav nav-list bs-docs-sidenav">
+				<li {% if about_sidebar %} class="active" {% endif %}><a href="/about.html"><i class="icon-chevron-right"></i>About</a></li>
+				<li {% if people_sidebar %} class="active" {% endif %}><a href="/people.html"><i class="icon-chevron-right"></i>People</a></li>
+				<li {% if careers_sidebar %} class="active" {% endif %}><a href="/careers.html"><i class="icon-chevron-right"></i>Careers</a></li>
+				<li {% if press_sidebar %} class="active" {% endif %}><a href="/press.html"><i class="icon-chevron-right"></i>Press</a></li>
+			</ul>
+		
+			<p>Looking for help? Check out our <a href="/documentation.html">documentation</a> or contact support.</p>
+
+			<p>Get in touch with us. Our contact form goes to real people and we'd love to hear from you. <a href="/contact.html">Contact us</a>.</p>
+
+		</div><!-- end of sidebar -->
+	{% endblock sidebar %}
+	{% block aboutcontent %}
+	{% endblock aboutcontent %}
+	</div>
+</div>
+{% endblock content %}
