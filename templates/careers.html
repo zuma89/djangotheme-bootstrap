@@ -1,5 +1,7 @@
 {% extends 'about_base.html' %}
 
+{% block title %}Careers{% endblock %}
+
 {% block sidebar %}
   {% with careers_sidebar=True %}
     {{ block.super }}
@@ -7,5 +9,4 @@
 {% endblock sidebar %}
 
 {% block aboutcontent %}
-
 {% endblock aboutcontent %}
