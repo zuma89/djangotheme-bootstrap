@@ -18,13 +18,13 @@
 			<div id="myCarousel" class="carousel slide">
 				<div class="carousel-inner">
 					<div class="item active">
-						<img src="img/slide-01.jpg" alt="">
+						<img src="{{ STATIC_URL }}img/carousel/slide-01.jpg" alt="">
 					</div>
 					<div class="carousel-inner">
-						<img src="img/slide-02.jpg" alt="">
+						<img src="{{ STATIC_URL }}img/carousel/slide-02.jpg" alt="">
 					</div>
 					<div class="carousel-inner">
-						<img src="img/slide-03.jpg" alt="">
+						<img src="{{ STATIC_URL }}img/carousel/slide-03.jpg" alt="">
 					</div>
 				</div><!-- end of carousel-inner -->
 			</div><!-- end of carousel -->
@@ -43,7 +43,29 @@
 			</form>
 		</section><!-- end of sign up form-->
 	</section><!-- end of row-fluid -->
-</section>	
+
+	<hr>
+
+	<section class="row-fluid">
+		<section class="span6">
+			<h2>Subscribe to our newsletter</h2>
+			<form method="" action="">
+				<div class="form-inline newsletter">
+					<input class="input-xlarge2" type="text" name="email" placeholder="Enter your email...">
+					<button type="submit" class="btn btn-info">Subscribe</button>
+				</div>
+				<label class="newsletter">If you give us your email, we'll send you a note when we have something new in the house. If you don't sign up, how will we be able to invite you to the party? We understand that your email is a precious commodity. We know you don't just give it to anyone. We'll keep it secret and we'll keep it safe. We have a secret vault.</label>
+			</form>
+		</section>
+		<section class="offset2 span3 social-media">
+			<h2>Social Media</h2>
+			<p><a href="#"><img src="{{ STATIC_URL }}img/social-icons/32/facebook_hover_32.png" alt="Facebook">&nbsp;Like our page on Facebook</a></p>
+			<p><a href="#"><img src="{{ STATIC_URL }}img/social-icons/32/twitter_hover_32.png" alt="Twitter">&nbsp;Follow us on Twitter</a></p>
+			<p><a href="#"><img src="{{ STATIC_URL }}img/social-icons/32/google_hover_32.png" alt="Google Plus">&nbsp;Follow our Google+ page</a></p>
+			<p><a href="#"><img src="{{ STATIC_URL }}img/social-icons/32/feed_hover_32.png" alt="RSS Feed">&nbsp;Subscribe to our RSS Feed</a></p>
+		</section>
+	</section>
+</section><!-- end of jumbotron -->
 {% endblock content %}
 
 {% block script %}
