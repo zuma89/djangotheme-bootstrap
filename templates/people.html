@@ -1,0 +1,26 @@
+{% extends 'about_base.html' %}
+
+{% block sidebar %}
+  {% with people_sidebar=True %}
+    {{ block.super }}
+  {% endwith %}
+{% endblock sidebar %}
+
+{% block aboutcontent %}
+<div class="span8 about">
+	<div class="featurette">
+		<img class="featurette-image pull-right img-circle" src="{{ STATIC_URL }}img/Zune.png">
+		<h2 class="muted">Tim Watts</h2>
+		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis justo dictum justo accumsan pretium. Vestibulum sodales massa id dolor eleifend in bibendum odio pulvinar. Donec id laoreet augue. Nulla suscipit arcu vitae metus pellentesque cursus eu nec massa. Donec nec quam velit. Suspendisse potenti. Nam in est et nibh accumsan porta in eget lacus. Maecenas vestibulum scelerisque diam, nec tristique enim interdum a. Fusce eget sem justo. Mauris ultricies sapien id dolor lacinia porta. Etiam egestas pharetra molestie. Donec ullamcorper laoreet nisi et pulvinar.</p>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="featurette">
+		<img class="featurette-image pull-left img-circle" src="{{ STATIC_URL }}img/firefox.jpg">
+		<h2 class="muted">Hilary Ho Jia Hao</h2>
+		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis justo dictum justo accumsan pretium. Vestibulum sodales massa id dolor eleifend in bibendum odio pulvinar. Donec id laoreet augue. Nulla suscipit arcu vitae metus pellentesque cursus eu nec massa. Donec nec quam velit. Suspendisse potenti. Nam in est et nibh accumsan porta in eget lacus. Maecenas vestibulum scelerisque diam, nec tristique enim interdum a. Fusce eget sem justo. Mauris ultricies sapien id dolor lacinia porta. Etiam egestas pharetra molestie. Donec ullamcorper laoreet nisi et pulvinar.</p>
+	</div>
+</div>
+{% endblock aboutcontent %}
+
